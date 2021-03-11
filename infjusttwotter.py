@@ -52,16 +52,3 @@ while currtime[2] < 31:
     currtime = dt.now().timetuple()
   else:
     continue
-
-# frst=True
-# i=0
-# while frst==True:
-#   currtime = dt.now().timetuple()
-#   i+=1
-#   if(i%100==0):
-#     print(currtime[3:6])
-  
-#   if(currtime[3]==1 and currtime[4]==29 and currtime[5]==6):
-#     api.update_status('just')
-#     frst=False
-# print(":fin")

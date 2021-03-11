@@ -36,7 +36,7 @@ def get_twt(df,currtime,injustix=3):
 currtime = dt.now().timetuple()
 glob_sleep_arr = [3600,3600*2,3600*3,3600*5,3600*8,3600*4,3600]
 glob_dct = {2:0,3:1,5:2,8:3,13:4,21:5,1:6}
-
+api.update_status("just {}".format(currtime[3]))
 while currtime[2] < 31:
   currtime = dt.now().timetuple()
   tweet = get_twt(df1,currtime)    

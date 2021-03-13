@@ -48,9 +48,15 @@ while currtime[2] < 31:
         api.update_status(tweet)
       except:
         print("bt with {} at {}".format(tweet,currtime))      
-      print("At {} have tweeted: {}".format(currtime[3],tweet)) 
-      time.sleep(glob_sleep_arr[glob_dct[currtime[3]]])
+      print("At {} have tweeted: {}".format(currtime[3],tweet))
+      sleep_time = glob_sleep_arr[glob_dct[currtime[3]]]
+      sleep_chunk = 29*60
+      quot,rem = divmod(sleep_time,sleep_chunk)
+      for i in range(1,quot+1):
+        time.sleep(sleep_chunk)
+        print("boop")
+      time.sleep(rem)
+    
     currtime = dt.now(pytz.timezone("EST")).timetuple()
-  
   else:
     continue

@@ -50,6 +50,7 @@ while currtime[2] < 31:
         print("bt with {} at {}".format(tweet,currtime))      
       print("At {} have tweeted: {}".format(currtime[3],tweet)) 
       time.sleep(glob_sleep_arr[glob_dct[currtime[3]]])
-    currtime = dt.now().timetuple()
+    currtime = dt.now(pytz.timezone("EST")).timetuple()
+  
   else:
     continue

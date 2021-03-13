@@ -4,6 +4,7 @@ import random
 import pandas as pd
 import time
 from datetime import datetime as dt
+import pytz
 from os import environ
 
 consumer_key = environ['consumer_key']
@@ -33,12 +34,12 @@ def get_twt(df,currtime,injustix=3):
   
   return tweet
 
-currtime = dt.now().timetuple()
+currtime = dt.now(pytz.timezone("EST")).timetuple()
 glob_sleep_arr = [3600,3600*2,3600*3,3600*5,3600*8,3600*4,3600]
 glob_dct = {2:0,3:1,5:2,8:3,13:4,21:5,1:6}
-api.update_status("just {}".format(currtime[3]))
+# api.update_status("just {}".format(currtime[3]))
 while currtime[2] < 31:
-  currtime = dt.now().timetuple()
+  currtime = dt.now(pytz.timezone("EST")).timetuple()
   tweet = get_twt(df1,currtime)    
 
   if len(tweet) < 280:

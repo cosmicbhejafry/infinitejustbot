@@ -50,9 +50,10 @@ while currtime[2] < 31:
         print("bt with {} at {}".format(tweet,currtime))      
       print("At {} have tweeted: {}".format(currtime[3],tweet))
       sleep_time = glob_sleep_arr[glob_dct[currtime[3]]]
-      sleep_chunk = 29*60
+      sleep_chunk = 10*60
       quot,rem = divmod(sleep_time,sleep_chunk)
       for i in range(1,quot+1):
+        print("boop")
         time.sleep(sleep_chunk)
         print("boop")
       time.sleep(rem)

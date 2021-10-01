@@ -1,4 +1,9 @@
 # infinitejustbot
 Say hi to me on [twitter!](https://twitter.com/infinitejust1)
 
-_Thankful to [rdegges](https://stackoverflow.com/questions/39139165/running-simple-python-script-continuously-on-heroku/39170561#39170561), [reduvid](https://twitter.com/reduvid)_
+Ran into scheduling problems so I had abandoned this back in March 2021.
+I tried:
+    - a random script scheduler which turned out to be paid back in March 2021
+    - Heroku but without a scheduler, I realized I wouldve had to write a scheduler so I...procrastinated
+
+So as of Oct 2021, I finally wrote that simple scheduler for automating tweets. Let's see what happens, since I can only run 2 dynos at a time, a worker and either the webserver or clock. 
